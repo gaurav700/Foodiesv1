@@ -10,7 +10,14 @@ export default function Header() {
         <Image src={logo} alt="A plate with food on it" priority />
         NextLevel Food
       </Link>
-      <NavLink />
+      <nav className={styles.nav}>
+        <ul>
+          <li>
+            <NavLink href="/meals">Browse meals</NavLink>
+            <NavLink href="/community">Join our community</NavLink>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }
