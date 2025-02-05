@@ -1,7 +1,9 @@
 import Link from "next/link";
 import styles from "./page.module.css";
 import MealsGrid from "@/app/components/meals/meals-grid";
-export default function MealsPage() {
+import { getMeals } from "@/lib/meals";
+export default async function MealsPage() {
+  const meals = await getMeals();
   return (
     <>
       <header className={styles.header}>
@@ -12,12 +14,12 @@ export default function MealsPage() {
         <p>
           Choose your favourite recipe and cook it yourself. It is easy and fun!
         </p>
-        <p className={styles.cts}>
+        <p className={styles.cta}>
           <Link href="/meals/share">Share Your Favourite Recipe</Link>
         </p>
       </header>
       <main className={styles.main}>
-        <MealsGrid />
+        <MealsGrid meals={meals} />
       </main>
     </>
   );
