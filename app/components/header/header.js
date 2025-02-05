@@ -1,8 +1,8 @@
-import Link from "next/link";
 import logo from "@/assets/logo.png";
 import styles from "./header.module.css";
 import Image from "next/image";
-
+import NavLink from "./navLink";
+import Link from "next/link";
 export default function Header() {
   return (
     <header className={styles.header}>
@@ -10,17 +10,7 @@ export default function Header() {
         <Image src={logo} alt="A plate with food on it" priority />
         NextLevel Food
       </Link>
-
-      <nav className={styles.nav}>
-        <ul>
-          <li>
-            <Link href="/meals">Browse Meals</Link>
-          </li>
-          <li>
-            <Link href="/community">Browse Community</Link>
-          </li>
-        </ul>
-      </nav>
+      <NavLink />
     </header>
   );
 }
