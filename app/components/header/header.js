@@ -14,6 +14,8 @@ export default function Header() {
         <ul>
           <li>
             <NavLink href="/meals">Browse meals</NavLink>
+          </li>
+          <li>
             <NavLink href="/community">Join our community</NavLink>
           </li>
         </ul>
