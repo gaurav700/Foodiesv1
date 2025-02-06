@@ -7,6 +7,11 @@ import classes from "./page.module.css";
 import { shareMeal } from "@/lib/actions";
 import Button from "@/app/components/meals/button";
 
+// export const metadata = {
+//   title: "Share a meal",
+//   description: "Share a meal to just fill the form.",
+// };   it will not work because of the client component
+
 export default function ShareMealPage() {
   const [state, formAction] = useFormState(shareMeal, { message: null });
 
